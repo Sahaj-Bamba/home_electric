@@ -20,7 +20,7 @@
 {% block content %}
 
 
-    {% for i in i|rjust:8 %}
+    {% for i in i|rjust:9 %}
         <div class="room_no_container">
             <div class="well well-lg blk"> Room number {{ forloop.counter }} </div>
             <form class="form" action="{% url 'accounts:room' %} " method="post" style="display: none">

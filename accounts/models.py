@@ -9,13 +9,16 @@ class my_users(models.Model):
 
 
 class user_details(models.Model):
-    user_room_no = models.DecimalField(verbose_name="room_no", max_digits=2, decimal_places=0, blank=False)
+
+    user_room_no = models.DecimalField(verbose_name="room_no", max_digits=2, decimal_places=0, blank=False, default=0)
     user_name = models.CharField(verbose_name="name", max_length=100, blank=False)
     user_date_entry = models.IntegerField(verbose_name="date_entry", default=0)
-    user_doj = models.DateTimeField(verbose_name="doj")
+    user_doj = models.DateField(verbose_name="doj")
     user_contact = models.IntegerField(verbose_name="contact", default=0)
-    rent = models.DecimalField(verbose_name="rent", max_digits=10, decimal_places=2, blank=False)
-    bill_prep = models.IntegerField(verbose_name="bill_prep", default=0)
+    user_rent = models.DecimalField(verbose_name="rent", max_digits=10, decimal_places=2, blank=False, default=0)
+    previous_units = models.DecimalField(verbose_name="prev_units", max_digits=10, decimal_places=2, blank=False, default=0)
+    previous_dues = models.DecimalField(verbose_name="prev_dues", max_digits=10, decimal_places=2, blank=False, default=0)
+    billed = models.IntegerField(verbose_name="billed", default=0)
 
     def __str__(self):
         return str(self.user_room_no) + self.user_name
@@ -23,13 +26,13 @@ class user_details(models.Model):
 
 class consumption(models.Model):
     room_no = models.IntegerField(verbose_name="room")
-    reading = models.DecimalField(verbose_name="reading", max_digits=10, decimal_places=1, blank=False)
-    dor = models.DateTimeField(verbose_name="dor", auto_now_add=True)
+    reading = models.DecimalField(verbose_name="reading", max_digits=10, decimal_places=1, blank=False, default=0.0)
+    dor = models.DateTimeField(verbose_name="dor")
 
 
 class payment(models.Model):
     room_no = models.IntegerField(verbose_name="room")
-    amount = models.DecimalField(verbose_name="amount", max_digits=10, decimal_places=1, blank=False)
+    amount = models.DecimalField(verbose_name="amount", max_digits=10, decimal_places=1, blank=False, default=0)
     dop = models.DateTimeField(verbose_name="dop", auto_now_add=True)
 
 
