@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a345136b-2259-4d22-815f-2692a13225a3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home_electric/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home_electric/templates/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home_electric/templates/not_found.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_electric/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/home_electric/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_electric/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/home_electric/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home_electric/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home_electric/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/static/home_electric/stylesheet/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/static/home_electric/stylesheet/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home_electric/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/home_electric/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home_electric/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/home_electric/templates/home.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,10 +58,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home_electric/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
+            <state relative-caret-position="239">
+              <caret line="86" column="18" lean-forward="true" selection-start-line="86" selection-start-column="18" selection-end-line="86" selection-end-column="18" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -95,8 +88,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/home_electric/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+            <state relative-caret-position="340">
+              <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -108,7 +101,11 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/accounts/static/home_electric/stylesheet/base.css">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-170">
+              <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -160,11 +157,12 @@
         <option value="$PROJECT_DIR$/home_electric/templates/not_found.html" />
         <option value="$PROJECT_DIR$/home_electric/static/home_electric/stylesheet/contact.css" />
         <option value="$PROJECT_DIR$/home_electric/templates/base.html" />
+        <option value="$PROJECT_DIR$/accounts/static/home_electric/stylesheet/base.css" />
         <option value="$PROJECT_DIR$/home_electric/templates/home.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -275,12 +273,12 @@
       <updated>1562063789074</updated>
       <workItem from="1562063790464" duration="2917000" />
       <workItem from="1562182245988" duration="3121000" />
-      <workItem from="1562235773072" duration="4761000" />
+      <workItem from="1562235773072" duration="6093000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10799000" />
+    <option name="totallyTimeSpent" value="12131000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
@@ -415,9 +413,6 @@
     <entry file="file://$PROJECT_DIR$/accounts/static/home_electric/pictures/1.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/accounts/static/home_electric/stylesheet/base.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/accounts/static/home_electric/stylesheet/contact.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -428,12 +423,20 @@
     <entry file="file://$PROJECT_DIR$/home_electric/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/accounts/static/home_electric/stylesheet/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-170">
+          <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/home_electric/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
+        <state relative-caret-position="239">
+          <caret line="86" column="18" lean-forward="true" selection-start-line="86" selection-start-column="18" selection-end-line="86" selection-end-column="18" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -448,8 +451,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/home_electric/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+        <state relative-caret-position="340">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
         </state>
       </provider>
     </entry>

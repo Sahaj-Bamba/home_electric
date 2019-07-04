@@ -15,4 +15,9 @@
 {% block content %}
 
 
+    {% for i in i|rjust:8 %}
+        <div class="well well-lg blk"> Room number {{ forloop.counter }} </div>
+    {% endfor %}
+    <br><br><br>
+
 {% endblock %}
