@@ -1,0 +1,117 @@
+
+{% load static  %}
+
+
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>
+            {% block title %}
+            {% endblock %}
+        </title>
+
+        <!--    fixing viewport scale            -->
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!--    Including Jquery and Bootstrap            -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	    <link rel="icon" type="image/x-icon" href="{% static 'main_icon.ico' %}">
+	    <link rel="stylesheet" type="text/css" href="{% static 'home_electric/stylesheet/base.css' %}">
+
+	    <script type="text/javascript" src="{% static 'home_electric/javascript/base.js' %}"></script>
+	
+        {% block statics %}
+        
+        {% endblock %}
+    </head>
+
+
+	<body>
+
+        <!-- Header -->
+
+		<nav class="navbar navbar-fixed-top navbar-inverse">
+		    <div class="container-fluid">
+			    <div class="navbar-header">
+			    <!--  Button for collapse of main nav bar  -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-bar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="active"><a class="navbar-brand active" href="#">Bamba Rent Portal</a>
+                    </div>
+			    </div>
+                <div class="collapse navbar-collapse" id="main-nav-bar">
+                    <ul class="nav navbar-nav">
+
+                    </ul>
+                </div>
+            </div>
+		</nav>
+
+        <div class="main" style="max-height: 100%; height: 100%; min-height: 570px; width: 100%;left: 0px;top: 0px;">
+
+            <div class="jumbotron">
+                <div class="container text-center">
+                    <h1>
+                        {% block title2 %}
+
+                        {% endblock %}
+                    </h1>
+                    <strong>
+                        <h2 class="mark">
+                            {% block quote %}
+
+                            {% endblock %}
+                        </h2>
+                    </strong>
+                </div>
+            </div>
+
+            {% block content %}
+            {% endblock %}
+
+        </div>
+        <!--        Footer      -->
+
+        <div class="footer" >
+            <div class="txt">
+                Copyright © 2019<br> Design by Sahaj Bamba
+            </div>
+			<div class="social" >
+				<div class="tag" >
+                    <div class="image" style=" border: solid 0px red; background-image: url({% static 'home_electric/pictures/logos/fb.jpg'%});" >
+                    </div>
+                    <div class="image2" style=" border: solid 0px red; background-image: url({% static 'home_electric/pictures/logos/fb2.jpg'%});">
+                    </div>
+                </div>
+                <div class="tag" >
+                    <div class="image" style="background-image: url({% static 'home_electric/pictures/logos/twitter.jpg'%}); " >
+                    </div>
+                    <div class="image2" style=" border: solid 0px red; background-image: url({% static 'home_electric/pictures/logos/twitter2.jpg'%}); ">
+                    </div>
+                </div>
+                <div class="tag" >
+                    <div class="image" style=" border: solid 0px red; background-image: url({% static 'home_electric/pictures/logos/instagram.png'%}); " >
+                    </div>
+                    <div class="image2" style=" border: solid 0px red; background-image: url({% static 'home_electric/pictures/logos/instagram2.png'%}); ">
+                    </div>
+                </div>
+                <div class="tag" >
+                    <div class="image" style=" border: solid 0px red; background-image: url({% static 'home_electric/pictures/logos/youtube.png'%}); " >
+                    </div>
+                    <div class="image2" style=" border: solid 0px red; background-image: url({% static 'home_electric/pictures/logos/youtube2.png'%}); ">
+                    </div>
+				</div>
+            </div>
+       </div>
+
+	</body>
+</html>
+
