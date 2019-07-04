@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% load static  %}
+
+{% block title %}
+    Room Number {{ request.session.room_number }}
+{% endblock %}
+
+{% block title2 %}
+    Room Number {{ request.session.room_number }}
+{% endblock %}
+
+{% block content %}
+
+    <link rel="stylesheet" href="{% static 'home_electric/stylesheet/login.css' %}">
+
+{% endblock %}
