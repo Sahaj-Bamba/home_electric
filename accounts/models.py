@@ -25,9 +25,9 @@ class user_details(models.Model):
 
 
 class consumption(models.Model):
-    room_no = models.IntegerField(verbose_name="room")
+    room_no = models.IntegerField(verbose_name="room", default=0)
     reading = models.DecimalField(verbose_name="reading", max_digits=10, decimal_places=1, blank=False, default=0.0)
-    dor = models.DateTimeField(verbose_name="dor")
+    dor = models.DateField(verbose_name="dor")
 
 
 class payment(models.Model):
@@ -41,5 +41,5 @@ class bill(models.Model):
     dues = models.DecimalField(verbose_name="dues", max_digits=10, decimal_places=2, blank=False)
     rent = models.DecimalField(verbose_name="rent", max_digits=10, decimal_places=2, blank=False)
     electric_bill = models.DecimalField(verbose_name="electric_bill", max_digits=10, decimal_places=2, blank=False)
-    dob = models.DateTimeField(verbose_name="dob", auto_now_add=True)
+    dob = models.DateField(verbose_name="dob", auto_now_add=True)
 
