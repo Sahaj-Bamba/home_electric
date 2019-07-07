@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load static  %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block title2 %}
+    Login
+{% endblock %}
+
+{% block content %}
+
+    <link rel="stylesheet" href="{% static 'home_electric/stylesheet/login.css' %}">
+    <form class="my-form" action="{% url 'accounts:pay' %} " method="post">
+        {% csrf_token %}
+        <pre> <div class="well well-lg blk"> Room Number   <input type="number" name="a" > </div> </pre>
+        <pre> <div class="well well-lg blk"> Payment Received   <input type="number" name="b" > </div> </pre>
+        <input type="submit" value="login">
+    </form>
+
+{% endblock %}

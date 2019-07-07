@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from datetime import date
 from .models import *
 # Create your views here.
@@ -58,8 +58,36 @@ def user_room(request):
 
 
 def user_login(request):
+    if request.method == 'POST':
+        data = request.POST.copy()
+        a = data.get('name')
+        b = data.get('pass')
+        x = my_users.objects.filter(my_user_name=a).filter(my_user_pass=b)
+        if x.count() > 0:
+            request.session['gamer'] = a
+            request.session['gamer_auth'] = x.first().authority
+            return redirect('home')
+
+    return render(request, 'accounts/login.html')
     pass
 
 
 def pay(request):
+    if request.method == 'POST':
+        data = request.POST.copy()
+        a = data.get('a')
+        b = data.get('b')
+        x = payment()
+        x.room_no = a
+        x.payment = float(b)
+        x.save()
+
+        y = user_details.objects.get(user_room_no=a)
+        z = float(y.previous_dues)
+        y.previous_dues = z-float(b)
+        y.save()
+
+        pass
+
+    return render(request, 'accounts/pay.html')
     pass
