@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a345136b-2259-4d22-815f-2692a13225a3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/home_electric/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/home_electric/settings.py" afterDir="false" />
-    </list>
+    <list default="true" id="a345136b-2259-4d22-815f-2692a13225a3" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,8 +76,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/home_electric/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="58" column="7" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
+            <state relative-caret-position="419">
+              <caret line="121" column="46" lean-forward="true" selection-start-line="121" selection-start-column="46" selection-end-line="121" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -284,18 +282,17 @@
       <workItem from="1562235773072" duration="18075000" />
       <workItem from="1562420056905" duration="1196000" />
       <workItem from="1562523207558" duration="9198000" />
-      <workItem from="1562694802847" duration="363000" />
+      <workItem from="1562694802847" duration="627000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34870000" />
+    <option name="totallyTimeSpent" value="35134000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.27571115" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.27571115" />
       <window_info id="Structure" order="1" sideWeight="0.50080776" side_tool="true" weight="0.2489083" />
       <window_info id="Favorites" order="2" sideWeight="0.50080776" side_tool="true" weight="0.2489083" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -309,7 +306,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32932165" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5021882" side_tool="true" weight="0.33260393" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49781182" visible="true" weight="0.33260393" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49781182" visible="true" weight="0.33260393" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -489,8 +486,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/home_electric/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="58" column="7" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
+        <state relative-caret-position="419">
+          <caret line="121" column="46" lean-forward="true" selection-start-line="121" selection-start-column="46" selection-end-line="121" selection-end-column="46" />
         </state>
       </provider>
     </entry>
