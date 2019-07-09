@@ -55,7 +55,7 @@ ROOT_URLCONF = 'home_electric.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['home_electric\\templates','home_electric/templates'],
+        'DIRS': ['home_electric\\templates','home_electric/templates','home_electric/home_electric/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
