@@ -33,13 +33,13 @@ class consumption(models.Model):
 class payment(models.Model):
     room_no = models.IntegerField(verbose_name="room")
     amount = models.DecimalField(verbose_name="amount", max_digits=10, decimal_places=1, blank=False, default=0)
-    dop = models.DateTimeField(verbose_name="dop", auto_now_add=True)
+    dop = models.DateTimeField(verbose_name="dop")
 
 
 class bill(models.Model):
     room_no = models.IntegerField(verbose_name="room")
+    payed = models.DecimalField(verbose_name="payed", max_digits=10, decimal_places=2, blank=False)
     dues = models.DecimalField(verbose_name="dues", max_digits=10, decimal_places=2, blank=False)
     rent = models.DecimalField(verbose_name="rent", max_digits=10, decimal_places=2, blank=False)
     electric_bill = models.DecimalField(verbose_name="electric_bill", max_digits=10, decimal_places=2, blank=False)
-    dob = models.DateField(verbose_name="dob", auto_now_add=True)
-
+    dob = models.DateField(verbose_name="dob")

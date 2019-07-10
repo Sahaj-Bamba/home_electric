@@ -7,6 +7,7 @@ app_name='accounts'
 urlpatterns = [
     re_path(r'^room/$', views.user_room, name='room'),
     re_path(r'^login/$', views.user_login, name='login'),
+    re_path(r'^logout/$', views.user_logout, name='logout'),
     re_path(r'^pay/$', views.pay, name='pay'),
 
     # re_path(r'^signup/$', views.user_signup, name='signup'),

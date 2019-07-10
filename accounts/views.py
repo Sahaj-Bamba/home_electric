@@ -13,8 +13,10 @@ def user_room(request):
         y = data
         request.session['room_number'] = data
         # //abc=data+1
-
+    if y==0:
+        return redirect('home')
     x = user_details.objects.get(user_room_no=y)
+
     z = date.today().day
     abc=1
     if z == 28:
@@ -27,20 +29,33 @@ def user_room(request):
 
             # bill preparation script
 
+            ze = bill.objects.filter(room_no=x.user_room_no).order_by("-dob").first()
+            if ze is None:
+                x.previous_dues = 0
+            else:
+                x.previous_dues = ((ze.dues + ze.rent + ze.electric_bill) - ze.payed);
+
             a = bill()
 
             a.room_no = x.user_room_no
             a.dues = x.previous_dues
             a.rent = x.user_rent
 
-            b = consumption.objects.filter(room_no=x.user_room_no).order_by("-dor")
+            b = consumption.objects.filter(room_no=x.user_room_no).order_by("-dor").order_by("-reading")
 
-            a.electric_bill = (b.first().reading - x.previous_units)*6
+            if b is None:
+                a.electric_bill = 0
+            else:
+                a.electric_bill = (b.first().reading - x.previous_units)*6
+                x.previous_units = b.first().reading
+
             a.dob = date.today()
+            a.payed = 0
 
-            x.previous_units = b.first().reading
             x.previous_dues = a.dues + a.rent + a.electric_bill
             x.billed = 0
+
+            a.dob = date.today()
 
             x.save()
             a.save()
@@ -54,7 +69,7 @@ def user_room(request):
         a = bill.objects.filter(room_no=x.user_room_no).order_by("-dob").first()
         pass
 
-    return render(request, 'accounts\\room.html', {'dues': a.dues, 'rent': a.rent, 'electric': a.electric_bill, 'total': (a.dues+a.rent+a.electric_bill)})
+    return render(request, 'accounts\\room.html', {'dues': a.dues, 'rent': a.rent, 'electric': a.electric_bill, 'payed':a.payed ,'total': ((a.dues+a.rent+a.electric_bill)-a.payed)})
 
 
 def user_login(request):
@@ -77,17 +92,25 @@ def pay(request):
         data = request.POST.copy()
         a = data.get('a')
         b = data.get('b')
-        x = payment()
-        x.room_no = a
-        x.payment = float(b)
+        x = bill.objects.filter(room_no=a).order_by("-dob").first()
+        x.payed += int(b)
         x.save()
 
-        y = user_details.objects.get(user_room_no=a)
-        z = float(y.previous_dues)
-        y.previous_dues = z-float(b)
+        y = payment()
+        y.room_no = a
+        y.amount = b
+        y.dop = date.today()
         y.save()
-
+        return redirect('accounts:room')
         pass
 
     return render(request, 'accounts/pay.html')
     pass
+
+
+def user_logout(request):
+    if request.method == 'POST':
+        del request.session['gamer']
+        del request.session['gamer_auth']
+
+    return redirect('home')
