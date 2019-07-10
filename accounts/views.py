@@ -68,8 +68,10 @@ def user_room(request):
     else:
         a = bill.objects.filter(room_no=x.user_room_no).order_by("-dob").first()
         pass
-
-    return render(request, 'accounts/room.html', {'dues': a.dues, 'rent': a.rent, 'electric': a.electric_bill, 'payed':a.payed ,'total': ((a.dues+a.rent+a.electric_bill)-a.payed)})
+    if a is None:
+        return redirect('home')
+    else:
+        return render(request, 'accounts/room.html', {'dues': a.dues, 'rent': a.rent, 'electric': a.electric_bill, 'payed':a.payed ,'total': ((a.dues+a.rent+a.electric_bill)-a.payed)})
 
 
 def user_login(request):
