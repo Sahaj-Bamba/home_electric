@@ -41,5 +41,17 @@ class bill(models.Model):
     payed = models.DecimalField(verbose_name="payed", max_digits=10, decimal_places=2, blank=False)
     dues = models.DecimalField(verbose_name="dues", max_digits=10, decimal_places=2, blank=False)
     rent = models.DecimalField(verbose_name="rent", max_digits=10, decimal_places=2, blank=False)
+    previous_reading = models.DecimalField(verbose_name="prev_read", max_digits=10, decimal_places=2, blank=False, default=1000000)
+    current_reading = models.DecimalField(verbose_name="curr_read", max_digits=10, decimal_places=2, blank=False, default=1000000)
     electric_bill = models.DecimalField(verbose_name="electric_bill", max_digits=10, decimal_places=2, blank=False)
     dob = models.DateField(verbose_name="dob")
+
+
+class own_bill(models.Model):
+    date = models.DateField(verbose_name="date")
+    reading = models.IntegerField(verbose_name="reading")
+    cost = models.DecimalField(verbose_name="cost", max_digits=10, decimal_places=2)
+    type = models.IntegerField(verbose_name="type")
+
+    def __str__(self):
+        return str(self.reading)

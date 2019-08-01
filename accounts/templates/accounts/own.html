@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block statics %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home_electric/stylesheet/own.css' %} " >
+{% endblock %}
+
+{% block title %}
+    Own Bill
+{% endblock %}
+
+{% block title2 %}
+    Own Bill
+{% endblock %}
+
+{% block quote %}
+    Pay! Pay! Pay!
+{% endblock %}
+
+{% block content %}
+
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>john@example.com</td>
+            </tr>
+        </tbody>
+    </table>
+
+{% endblock %}

@@ -6,6 +6,11 @@ from .models import *
 # 28 is re billing set date
 
 
+def own(request):
+
+    return render(request, 'accounts/own.html')
+
+
 def user_room(request):
     y = 0
     if request.method == 'POST':

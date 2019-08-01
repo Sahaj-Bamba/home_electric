@@ -54,7 +54,9 @@
                                 <li><a href="{% url 'accounts:pay' %}">Payment</a></li>
                             {% endif %}
                         {% endif %}
+                        <li><a href="{% url 'accounts:own' %}">Own</a></li>
                     </ul>
+
                     <ul class="nav navbar-nav navbar-right" >
                         {% if 'gamer' in request.session %}
 
