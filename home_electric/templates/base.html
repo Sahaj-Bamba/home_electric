@@ -52,6 +52,7 @@
                         {% if 'gamer_auth' in request.session %}
                             {% if request.session.gamer_auth == 5 %}
                                 <li><a href="{% url 'accounts:pay' %}">Payment</a></li>
+                                <li><a href="{% url 'accounts:add' %}">Add</a></li>
                             {% endif %}
                         {% endif %}
                         <li><a href="{% url 'accounts:own' %}">Own</a></li>

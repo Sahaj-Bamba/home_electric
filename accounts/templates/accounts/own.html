@@ -23,17 +23,27 @@
     <table class="table table-bordered table-striped">
         <thead>
             <tr>
-                <th>Firstname</th>
-                <th>Lastname</th>
-                <th>Email</th>
+                <th>Date</th>
+                <th>Reading</th>
+                <th>Cost</th>
             </tr>
         </thead>
         <tbody>
+
+        {% for i in tmp %}
             <tr>
-                <td>John</td>
-                <td>Doe</td>
-                <td>john@example.com</td>
+                <td>{{ i.date }}</td>
+                <td>{{ i.reading }}</td>
+                <td>{{ i.cost }}</td>
             </tr>
+        {% endfor %}
+
+            <tr>
+                <td>    Total   </td>
+                <td>    NA      </td>
+                <td>    {{ total }}</td>
+            </tr>
+
         </tbody>
     </table>
 

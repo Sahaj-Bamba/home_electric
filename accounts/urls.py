@@ -10,6 +10,7 @@ urlpatterns = [
     re_path(r'^logout/$', views.user_logout, name='logout'),
     re_path(r'^pay/$', views.pay, name='pay'),
     re_path(r'^own/$', views.own, name='own'),
+    re_path(r'^add/$', views.add, name='add'),
     # re_path(r'^signup/$', views.user_signup, name='signup'),
     # re_path(r'^logout/$',views.user_logout, name='logout'),
     # re_path(r'^profile/$',views.user_profile, name='profile'),

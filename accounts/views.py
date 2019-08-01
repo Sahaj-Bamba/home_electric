@@ -7,8 +7,32 @@ from .models import *
 
 
 def own(request):
+    x = own_bill.objects.all().order_by("date")
+    r=0
+    for a in x:
+       r += a.cost
 
-    return render(request, 'accounts/own.html')
+    return render(request, 'accounts/own.html', {'tmp': x, 'total': r})
+
+
+def add(request):
+    if request.method == 'POST':
+        data = request.POST.copy()
+        a = data.get('a')
+        x = own_bill.objects.order_by("-date").first()
+        b = float(a)
+
+        y = own_bill()
+        y.type = 0
+        y.reading = b
+        y.cost = (b-x.reading)*6
+        y.date = date.today()
+        y.save()
+        return redirect('accounts:own')
+        pass
+
+    return render(request, 'accounts/add.html')
+    pass
 
 
 def user_room(request):
@@ -18,14 +42,14 @@ def user_room(request):
         y = data
         request.session['room_number'] = data
         # //abc=data+1
-    if y==0:
+    if y == 0:
         return redirect('home')
     x = user_details.objects.get(user_room_no=y)
 
     z = date.today().day
     abc=1
-    if z == 28:
-        abc=5
+    if z == 26:
+        abc = 5
         x.billed = 1
         x.save()
     abc=x.user_date_entry
@@ -52,6 +76,8 @@ def user_room(request):
                 a.electric_bill = 0
             else:
                 a.electric_bill = (b.first().reading - x.previous_units)*6
+                a.current_reading = b.first().reading
+                a.previous_reading = x.previous_units
                 x.previous_units = b.first().reading
 
             a.dob = date.today()
@@ -76,7 +102,7 @@ def user_room(request):
     if a is None:
         return redirect('home')
     else:
-        return render(request, 'accounts/room.html', {'dues': a.dues, 'rent': a.rent, 'electric': a.electric_bill, 'payed':a.payed ,'total': ((a.dues+a.rent+a.electric_bill)-a.payed)})
+        return render(request, 'accounts/room.html', {'dues': a.dues, 'rent': a.rent, 'electric': a.electric_bill, 'payed': a.payed, 'pre_read': a.previous_reading, 'curr_read': a.current_reading, 'total': ((a.dues+a.rent+a.electric_bill)-a.payed)})
 
 
 def user_login(request):
